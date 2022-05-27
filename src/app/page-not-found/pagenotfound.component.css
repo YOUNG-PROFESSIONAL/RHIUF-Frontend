@@ -1,0 +1,14 @@
+#page-not-found{
+  display: flex;
+}
+
+#page-not-found h1{
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  margin: 100px auto;
+ animation: notfound 1s infinite alternate ;
+}
+@keyframes notfound {
+  100% {color: rgb(255, 0, 0) ;}
+}

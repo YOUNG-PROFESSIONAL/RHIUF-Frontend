@@ -1,0 +1,14 @@
+
+<ng-container *ngIf="biographies$ | async as result" [ngSwitch]="result.status">
+  <ng-container *ngSwitchCase="status.LOADING">
+    <p>... Loading</p>
+  </ng-container>
+  <ng-container *ngSwitchCase="status.ERROR">
+    <p>{{result.msg}}</p>
+  </ng-container>
+  <ng-container *ngSwitchCase="status.LOADED">
+    <div id="bio-container">
+            <app-bio-form ></app-bio-form>
+    </div>
+  </ng-container>
+</ng-container>

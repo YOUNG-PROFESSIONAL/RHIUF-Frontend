@@ -1,0 +1,20 @@
+
+<div [formGroup]="bioForm" id="bioFormContainer">
+    <ng-container formArrayName="bioData">
+      <ng-container *ngFor="let bio of bioData.controls; let i=index" >
+        <form  [formGroupName]="i" class="form" >
+            <label class="entete">{{bio.value.bioCat}}</label>
+            <input type="hidden" formControlName="bioId"/>
+            <input type="hidden" formControlName="bioCat"/>
+            <label >Titre</label>
+              <input type="text" formControlName="bioTitle" id="bio-title-{{i}}"/>
+            <label>Description</label>
+              <textArea name="bioDesc" rows="5" [disabled]="isDisabled" id="bio-desc-{{i}}"></textArea>
+            <div class="group-btn">
+              <button (click)="editBio(i)" id="bio-edit-{{i}}" class="btn btn-edit">Editer</button>
+              <button id="bio-save-{{i}}" class="btn btn-save">Enregistrer</button>
+            </div>
+        </form>
+      </ng-container>
+    </ng-container>
+</div>

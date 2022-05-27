@@ -1,0 +1,43 @@
+#container{
+  display: flex;
+}
+
+#side-menu{
+  display: flex;
+  margin: 10px;
+  flex: 1 0 100px;
+  height: 250px;
+}
+
+#side-menu ul{
+  flex-flow: column;
+  list-style-type: none;
+  text-align: center;
+}
+
+#side-menu ul li{
+  width: 250px;
+  background-color: rgb(146, 251, 255);
+  margin: 25px 0px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#side-menu ul li> a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: medium;
+  padding: 10px 50px;
+}
+
+#side-menu ul li:hover{
+  background-color: rgb(235, 222, 222);
+}
+
+#content{
+  flex: 4 0 500px;
+  background-color: rgb(246, 249, 252);
+  min-height: 500px;
+  margin: 10px;
+  padding: 5px 10px;
+}

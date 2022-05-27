@@ -1,0 +1,39 @@
+#menubar{
+  background-image: linear-gradient(white 5%, blue );
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+}
+.menu{
+  display: flex;
+  align-items: baseline;
+}
+.menu li{
+  list-style-type: none;
+  padding: 20px 10px;
+}
+.menu li a{
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  padding: 5px;
+}
+
+.menu li:not(#logo) :hover{
+  border-bottom: 2px solid rgb(66, 78, 240);
+  box-shadow: 0px 1px 5px rgb(66, 78, 240);
+}
+
+@media  screen and (max-width: 500px) {
+  .menu {
+    flex-direction: column;
+  }
+  #menubar{
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}
+#logo a img{
+  width: 60px;
+}
