@@ -1,15 +1,31 @@
 <div id="menubar">
   <ul class="menu">
-    <li id="logo"><a><img alt="RHI-UF" src="../../favicon.ico"/></a></li>
-    <li id="macceuil"><a routerLink="/">Acceuil</a></li>
-    <li id="mactualites"><a routerLink="actualites">Actualités</a></li>
-    <li id="mevenement"><a routerLink="evenements">Evenements</a></li>
-    <li id="mdashboard"><a routerLink="dashboard">Dashboard</a></li>
-    <li id="mmembres"><a routerLink="membres">Membres</a></li>
+    <li id="logo">
+      <a><img alt="RHI-UF" src="assets/images/logo_tamiko_white.png"/></a>
+    </li>
+    <li id="acceuil">
+      <a routerLink="/acceuil" [routerLinkActive]="['active']">Acceuil</a>
+    </li>
+    <li id="actualites">
+      <a routerLink="actualites"  [routerLinkActive]="['active']">Actualités</a>
+    </li>
+    <li id="evenement">
+      <a routerLink="evenements"  [routerLinkActive]="['active']">Evenements</a>
+    </li>
+    <li id="dashboard">
+      <a routerLink="tableau-de-bord"  [routerLinkActive]="['active']">Dashboard</a>
+    </li>
+    <li id="membres">
+      <a routerLink="membres"  [routerLinkActive]="['active']">Membres</a>
+    </li>
   </ul>
   <ul class="menu">
-    <li><a routerLink="">Inscription</a></li>
-    <li><a routerLink="">Connexion</a></li>
+    <li>
+      <a [routerLink]="['/inscription']" [routerLinkActive]="['active']">Inscription</a>
+    </li>
+    <li>
+      <a [routerLink]="['/connexion']"  [routerLinkActive]="['active']">Connexion</a>
+    </li>
   </ul>
 </div>
 <router-outlet></router-outlet>

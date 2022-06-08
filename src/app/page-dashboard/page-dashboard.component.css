@@ -1,0 +1,30 @@
+#container{
+  display: flex;
+  padding: 25px;
+}
+#side-menu{
+ flex: 1 0 60px;
+}
+#side-content{
+  flex: 8 0 300px;
+  padding: 0px 25px;
+}
+#side-menu p {
+  background-color: rgba(0, 255, 85, 0.089);
+
+}
+#side-menu p a {
+  display: block;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 15px;
+}
+#side-menu>a:hover{
+  cursor: pointer;
+  background-color: azure;
+}
+.active{
+  background-color: cornflowerblue;
+  font-weight: 600;
+  color: beige;
+}

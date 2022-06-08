@@ -1,0 +1,30 @@
+<form class="card-container" *ngIf="childForm" [formGroup]="childForm" (ngSubmit)="submit()">
+  <div class="title">
+    {{data.bioCat}}
+  </div>
+  <hr style="margin-bottom: 5px;" />
+  <input type="hidden" formControlName="bioId" *ngIf="content"/>
+  <input type="hidden" formControlName="bioCat" *ngIf="content"/>
+  <div class="el-group">
+    <label for="bioTitle" class="label">Titre</label>
+    <hr/>
+    <input type="text" class="input" formControlName="bioTitle" *ngIf="input"/>
+    <span *ngIf="content" class="text">{{data.bioTitle}}</span>
+  </div>
+  <div class="el-group">
+    <label for="bioDesc" class="label">Description</label>
+    <hr/>
+    <textarea name="" class="textarea" cols="30" rows="5" formControlName="bioDesc" *ngIf="input" value="bioDesc"></textarea>
+    <span *ngIf="content" class="text">{{data.bioDesc}}</span>
+  </div>
+  <div class="el-group-enabled">
+    <label for="bioEnabled" class="label">Activer : </label>
+    <input type="checkbox" class="input checkbox" formControlName="bioEnabled" *ngIf="input"/>
+    <input type="checkbox" class="input checkbox" formControlName="bioEnabled" *ngIf="content"/>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn-edit" *ngIf="content" (click)="editer()" >Editer</button>
+    <button type="submit" class="btn-submit" *ngIf="input">Sauvegarder</button>
+    <button type="button" class="btn-cancel" *ngIf="input" (click)="annuler()">Annuler</button>
+  </div>
+</form>

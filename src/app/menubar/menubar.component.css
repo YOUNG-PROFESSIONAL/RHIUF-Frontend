@@ -3,8 +3,10 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
+  box-shadow: 0px 2px 10px blue;
+  overflow: hidden;
 }
+
 .menu{
   display: flex;
   align-items: baseline;
@@ -21,7 +23,7 @@
 }
 
 .menu li:not(#logo) :hover{
-  border-bottom: 2px solid rgb(66, 78, 240);
+  border-bottom: 2px solid rgb(255, 255, 255);
   box-shadow: 0px 1px 5px rgb(66, 78, 240);
 }
 
@@ -35,5 +37,11 @@
   }
 }
 #logo a img{
-  width: 60px;
+  width: 200px;
+}
+
+.active{
+  font-weight: 700;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px rgb(66, 78, 240);
 }

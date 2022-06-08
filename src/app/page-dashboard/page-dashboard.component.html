@@ -1,0 +1,32 @@
+<div id="container">
+  <div id="side-menu">
+      <p>
+        <a [routerLink]="['statistiques']"
+        [routerLinkActive]="['active']">Tableau de Bord
+        </a>
+      </p>
+      <p>
+        <a [routerLink]="['biographies']"
+        [routerLinkActive]="['active']">Biographies
+        </a>
+      </p>
+      <p>
+        <a [routerLink]="['actualites']"
+        [routerLinkActive]="['active']">Actualités
+        </a>
+      </p>
+      <p>
+        <a [routerLink]="['evenements']"
+        [routerLinkActive]="['active']">Evenements
+        </a>
+      </p>
+      <p>
+        <a [routerLink]="['membres']"
+        [routerLinkActive]="['active']">Membres
+        </a>
+      </p>
+    </div>
+  <div id="side-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

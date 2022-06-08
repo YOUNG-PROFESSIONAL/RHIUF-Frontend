@@ -1,4 +1,6 @@
+import { Store } from '@ngrx/store';
 import { Component, OnInit } from '@angular/core';
+import { BIO_ACTION_GET_ALL } from './shared/state/acc.action';
 
 @Component({
   selector: 'app-page-acceuil',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageAcceuilComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store:Store) { }
 
   ngOnInit(): void {
+    this.store.dispatch(BIO_ACTION_GET_ALL());
   }
 
 }

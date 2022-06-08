@@ -1,0 +1,67 @@
+:root{
+  --blue: #1e90ff;
+}
+.card-container{
+  box-shadow: 0 0 10px rgb(75, 75, 75);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 350px;
+  margin: 0px 20px 20px;
+}
+.title{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+.label{
+  margin-top: 5px;
+  font-weight: bold;
+}
+.el-group{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.el-group-enabled{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  align-items: center;
+}
+.input,.textarea{
+  padding: 5px;
+}
+.checkbox{
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+.btn-group{
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+.btn-group> button{
+  padding: 5px 10px;
+  margin: 5px 10px;
+  background-color: #1e90ff;
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.btn-group> button:hover{
+  background-color: #62b0ff;
+  outline: 3px solid rgb(214, 214, 214);
+}
+.text{
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap : break-word;
+  background-color: #cee7ff;
+}
